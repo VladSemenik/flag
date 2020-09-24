@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./gerb_belarus_1991_pogona.png" type="image/png" />
+    <title>БЧБ</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      #flag {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        min-width: 600px;
+        min-height: 300px;
+        width: 100vw;
+        height: 100vh;
+        overflow: hidden;
+      }
+
+      .line {
+        flex: 1;
+      }
+
+      .white-line {
+        background-color: white;
+      }
+
+      .red-line {
+        background-color: red;
+      }
+
+      #flag:after {
+        content: '';
+        display: block;
+        width: 200px;
+        height: 200vh;
+        margin-left: 60px;
+        background: linear-gradient(0.25turn, transparent, rgba(255, 246, 246, 0.38), transparent);
+        position: absolute;
+        left: -40px;
+        top: -350px;
+        z-index: 1;
+        -webkit-transform: rotate(35deg);
+        transform: rotate(35deg);
+        -webkit-transition: all 0.1s;
+        transition: all 0.1s;
+        -webkit-animation-name: slideme;
+        animation-name: slideme;
+        -webkit-animation-duration: 2.5s;
+        animation-duration: 2.5s;
+        -webkit-animation-delay: 2s;
+        animation-delay: 2s;
+        -webkit-animation-timing-function: ease-in-out;
+        animation-timing-function: ease-in-out;
+        -webkit-animation-iteration-count: infinite;
+        animation-iteration-count: infinite;
+      }
+
+      @-webkit-keyframes slideme {
+        0% {
+          left: -100%;
+          margin-left: 0px;
+        }
+
+        100% {
+          left: 120%;
+          margin-left: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="flag">
+      <div class="white-line line"></div>
+      <div class="red-line line"></div>
+      <div class="white-line line"></div>
+    </div>
+  </body>
+</html>
